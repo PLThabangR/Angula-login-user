@@ -1,0 +1,37 @@
+<p>signup-users works!</p>
+<h2 class="text-center mb-3">Sign-up</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <!--name-->
+  <div class="row">
+    <div class="col-md-12 form-group mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input id="name"  formControlName="name" type="text" name="name" class="form-control" placeholder="Name" required>
+    </div>
+  </div>
+
+  <!--Email-->
+  <div class="row">
+    <div class="col-md-12 form-group mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" type="email"  formControlName="email" name="email" class="form-control" placeholder="email" required>
+    </div>
+  </div>
+
+  <!--PNo-->
+  <div class="row">
+    <div class="col-md-12 form-group mb-3">
+      <label for="pNo" class="form-label">Password</label>
+      <input id="pNo" type="text" name="pNo"  formControlName="pNo" class="form-control" placeholder="Password" required>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+    </div>
+  </div>
+
+  <div>
+    
+  </div>
+</form>

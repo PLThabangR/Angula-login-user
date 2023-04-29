@@ -1,0 +1,39 @@
+    <!--Main Content-->
+    <div class="mt-5">
+        <div class="my-3">
+            <a  (click)="signUpPage()"><button type="button" class="btn btn-primary">Sign-out</button></a>
+        </div>
+        <h1 class="text-center">User info</h1>
+        <div class="container">
+            <table class="table border" >
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                 
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.password}}</td>
+                 
+                    <td>
+                        <div class="d-inline mx-2">
+                            <button class="btn btn-warning" (click)="updateUser(user.id)" type="button">Update</button>
+                        </div>
+                    
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
